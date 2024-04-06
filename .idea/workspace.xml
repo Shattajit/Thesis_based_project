@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c04d1720-64fb-4660-89a1-ca116c0c199d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Excel file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Excel file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image Acquisition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image Acquisition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/attendance logs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance.json" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance_log.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/attendance_log.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detected_faces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/detected_faces.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embeddings/embeddings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/embeddings/embeddings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ids.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ids.txt" afterDir="false" />
-    </list>
+    <list default="true" id="c04d1720-64fb-4660-89a1-ca116c0c199d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
