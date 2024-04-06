@@ -1,9 +1,19 @@
+import os
 import pandas as pd
 import json
 
-# Load IDs from ids.txt file
-with open('ids.txt', 'r') as file:
-    ids = [line.strip() for line in file]
+# Path to the dataset folder containing images
+dataset_folder = 'dataset'
+
+# List all files in the dataset folder
+image_files = os.listdir(dataset_folder)
+
+# Extract IDs from filenames (assuming filenames are the IDs)
+ids = sorted([os.path.splitext(file)[0] for file in image_files])  # Sort IDs
+
+# Save IDs to ids.txt file
+with open('ids.txt', 'w') as file:
+    file.write('\n'.join(ids))
 
 # Load the attendance log from the JSON file
 with open('attendance.json', 'r') as f:
@@ -28,6 +38,9 @@ for id in ids:
 
 # Convert the attendance data to a Pandas DataFrame
 df = pd.DataFrame(attendance_data)
+
+# Sort DataFrame by 'ID' column
+df = df.sort_values(by='ID')
 
 # Write the attendance data to an Excel file, overwriting any existing data
 with pd.ExcelWriter('attendance_log.xlsx', engine='xlsxwriter', mode='w') as writer:

@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c04d1720-64fb-4660-89a1-ca116c0c199d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SmartAttendance.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Excel file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Excel file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image Acquisition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image Acquisition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/attendance logs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance.json" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance_log.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/attendance_log.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detected_faces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/detected_faces.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embeddings/embeddings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/embeddings/embeddings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ids.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ids.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Data Acquisition.executor": "Run",
-    "Python.Dataset Creation.executor": "Run",
-    "Python.Excel file.executor": "Run",
-    "Python.Image Acquisition.executor": "Run",
-    "Python.Storing the Face Embeddings.executor": "Run",
-    "Python.api.executor": "Run",
-    "Python.attendance logs.executor": "Run",
-    "Python.dataset_image_acquisition.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/shattajit/PycharmProjects/SmartAttendance/collected_faces"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Data Acquisition.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Dataset Creation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Excel file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Image Acquisition.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Storing the Face Embeddings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.attendance logs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dataset_image_acquisition.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shattajit/PycharmProjects/SmartAttendance/collected_faces&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/collected_faces" />
