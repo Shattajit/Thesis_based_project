@@ -1,5 +1,8 @@
+from flask import Flask, render_template, request
 import cv2
 import os
+
+app = Flask(__name__)
 
 # Function to create a directory if it doesn't exist
 def create_directory(directory):
@@ -53,11 +56,7 @@ def capture_images(output_folder, person_name, num_images, ip_camera_url):
     for count in range(num_images):
         print(f"Capturing image {count + 1}...")
         frame = capture_image(ip_camera_url)
-        cv2.imshow('Capture Faces', frame)
-        cv2.waitKey(1000)  # Wait for 1 second
         captured_frames.append(frame)
-
-    cv2.destroyAllWindows()
 
     # Find the best image among the captured frames
     best_image = find_best_image(captured_frames)
@@ -69,7 +68,7 @@ def capture_images(output_folder, person_name, num_images, ip_camera_url):
         print(f"Best image saved as '{filename}'")
 
         # Rename the best image
-        person_id = input("Enter the ID for the person: ")
+        person_id = request.form['person_id']
         new_filename = f"{person_id}.jpg"
         new_filepath = os.path.join(output_folder, new_filename)
         os.rename(filename, new_filepath)
@@ -78,9 +77,19 @@ def capture_images(output_folder, person_name, num_images, ip_camera_url):
         with open("ids.txt", "a") as ids_file:
             ids_file.write(f"{person_id}\n")
 
-# Example usage:
-output_folder = "dataset"
-person_name = "opp"  # Change this to the name of the person being captured
-num_images = 5  # Change this to the number of images to capture for each person
-ip_camera_url = input("Enter the IP camera URL: ")  # Replace with your IP camera address
-capture_images(output_folder, person_name, num_images, ip_camera_url)
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/capture', methods=['POST'])
+def capture():
+    output_folder = "dataset"
+    person_name = request.form['person_name']
+    person_id = request.form['person_id']
+    num_images = 5
+    ip_camera_url = 'https://192.168.1.10:8080/shot.jpg'  # Replace with your IP camera address
+    capture_images(output_folder, person_name, num_images, ip_camera_url)
+    return "Images Captured Successfully!"
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection Result</title>
+</head>
+<body>
+    <h1>{{ num_faces }} faces detected!</h1>
+    {% for filename in filenames %}
+        <img src="{{ url_for('collected_faces', filename=filename) }}" alt="Face {{ loop.index }}">
+    {% endfor %}
+</body>
+</html>

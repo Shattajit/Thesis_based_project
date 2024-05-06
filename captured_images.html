@@ -1,0 +1,10 @@
+<h2>Captured Images</h2>
+<div id="imageContainer">
+    <table>
+        <tr>
+            {% for image_name in image_names %}
+            <td><img src="/collected_faces/{{ image_name }}"></td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>

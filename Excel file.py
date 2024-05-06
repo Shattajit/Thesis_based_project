@@ -39,15 +39,19 @@ for id in ids:
 # Convert the attendance data to a Pandas DataFrame
 df = pd.DataFrame(attendance_data)
 
-# Sort DataFrame by 'ID' column
-df = df.sort_values(by='ID')
+print(df)  # Add this line to check the structure of your DataFrame
 
-# Write the attendance data to an Excel file, overwriting any existing data
-with pd.ExcelWriter('attendance_log.xlsx', engine='xlsxwriter', mode='w') as writer:
-    df.to_excel(writer, index=False)
+# Sort DataFrame by 'ID' column if it exists
+if 'ID' in df.columns:
+    df = df.sort_values(by='ID')
+    # Write the attendance data to an Excel file, overwriting any existing data
+    with pd.ExcelWriter('attendance_log.xlsx', engine='xlsxwriter', mode='w') as writer:
+        df.to_excel(writer, index=False)
 
-    # Set the column widths manually
-    worksheet = writer.sheets['Sheet1']
-    worksheet.set_column('A:A', 20)  # Adjust the width of column 'A' to 20
-    worksheet.set_column('B:B', 20)  # Adjust the width of column 'B' to 20
-    worksheet.set_column('C:C', 20)  # Adjust the width of column 'C' to 20
+        # Set the column widths manually
+        worksheet = writer.sheets['Sheet1']
+        worksheet.set_column('A:A', 20)  # Adjust the width of column 'A' to 20
+        worksheet.set_column('B:B', 20)  # Adjust the width of column 'B' to 20
+        worksheet.set_column('C:C', 20)  # Adjust the width of column 'C' to 20
+else:
+    print("DataFrame does not contain 'ID' column.")

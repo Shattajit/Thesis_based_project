@@ -1,5 +1,9 @@
 import cv2
 import os
+import tkinter as tk
+from PIL import Image, ImageTk
+import urllib.request
+import numpy as np
 
 # Function to create a directory if it doesn't exist
 def create_directory(directory):
@@ -8,12 +12,9 @@ def create_directory(directory):
 
 # Function to capture a single image from IP camera
 def capture_image(ip_camera_url):
-    capture = cv2.VideoCapture(ip_camera_url)
-    if not capture.isOpened():
-        print("Error: Unable to connect to the IP camera. Exiting.")
-        exit()
-    ret, frame = capture.read()
-    capture.release()
+    img_resp = urllib.request.urlopen(ip_camera_url)
+    img_array = np.array(bytearray(img_resp.read()), dtype=np.uint8)
+    frame = cv2.imdecode(img_array, -1)
     return frame
 
 # Function to identify the best image from captured frames
@@ -50,14 +51,25 @@ def capture_images(output_folder, person_name, num_images, ip_camera_url):
     # Clear the content of the ids.txt file
     clear_ids_file()
 
+    # Create a Tkinter window
+    root = tk.Tk()
+    root.title("Captured Images")
+
     for count in range(num_images):
         print(f"Capturing image {count + 1}...")
         frame = capture_image(ip_camera_url)
-        cv2.imshow('Capture Faces', frame)
-        cv2.waitKey(1000)  # Wait for 1 second
         captured_frames.append(frame)
 
-    cv2.destroyAllWindows()
+        # Display the captured frame using Tkinter
+        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        image = Image.fromarray(image)
+        image = ImageTk.PhotoImage(image)
+        panel = tk.Label(root, image=image)
+        panel.image = image
+        panel.pack()
+
+        # Wait for 1 second before capturing the next frame
+        root.after(1000, panel.pack_forget)
 
     # Find the best image among the captured frames
     best_image = find_best_image(captured_frames)
@@ -77,6 +89,8 @@ def capture_images(output_folder, person_name, num_images, ip_camera_url):
         # Append the ID to the ids.txt file
         with open("ids.txt", "a") as ids_file:
             ids_file.write(f"{person_id}\n")
+
+    root.mainloop()
 
 # Example usage:
 output_folder = "dataset"

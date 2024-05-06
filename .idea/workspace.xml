@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c04d1720-64fb-4660-89a1-ca116c0c199d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/attendance logs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Acquisition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Acquisition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset Creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset Creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Excel file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Excel file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance.json" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance_log.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/attendance_log.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/detected_faces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/detected_faces.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embeddings/embeddings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/embeddings/embeddings.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -42,16 +45,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Python.Data Acquisition.executor": "Run",
     "Python.Dataset Creation.executor": "Run",
     "Python.Excel file.executor": "Run",
     "Python.Image Acquisition.executor": "Run",
     "Python.Storing the Face Embeddings.executor": "Run",
     "Python.api.executor": "Run",
+    "Python.app_start.executor": "Run",
     "Python.attendance logs.executor": "Run",
+    "Python.attendance_logs_tkinter.executor": "Run",
+    "Python.data_acquisition_flask.executor": "Run",
+    "Python.data_acquisition_tkinter.executor": "Run",
+    "Python.data_acquition_garbage.executor": "Run",
+    "Python.dataset_creation_tkinter.executor": "Run",
     "Python.dataset_image_acquisition.executor": "Run",
+    "Python.excel_file_tkinter.executor": "Run",
+    "Python.for capture image.executor": "Run",
     "Python.garbage_files.executor": "Run",
+    "Python.image_acquisition_1.executor": "Run",
+    "Python.image_acquisition_tkinter.executor": "Run",
     "Python.new_check.executor": "Run",
+    "Python.single_code_of_flask.executor": "Run",
+    "Python.storing_face_embeddings_tkinter.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -67,7 +83,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
