@@ -6,23 +6,25 @@ This project implements a face recognition system that detects faces in images, 
 
 ## Features
 
-- **User Authentication**: Register, login, and update profiles. Secure routes with JWT and role-based access.
+- **Face Detection**: Utilizes MTCNN to detect multiple faces in images.
   
-- **Category Management**: Create, update, delete, and list product categories.
+- **Face Recognition**: Uses FaceNet to extract facial embeddings and compares them using cosine similarity.
   
-- **Product Management**: CRUD operations for products, including image upload, filtering, and pagination.
+- **Attendance Logging**: Tracks and records attendance information, marking individuals as 'Present' or 'Absent'.
   
-- **Order Management**: Place orders, view order details, and update order status.
+- **Dynamic Thresholding**: Employs adaptive thresholding to improve face matching accuracy based on image quality.
   
-- **Payment Integration**: Process payments using Braintree.
+- **Report Generation**: Exports attendance data to an Excel file (`attendance_log.xlsx`).
   
-- **Search and Filters**: Search products by keyword and filter by category and price range.
+- **Detected Faces Saving**: Detected faces are saved in the `detected_faces` folder for further verification.
 
   
 
 ## Technologies Used
 
-- **Frontend**: React 
+**Frontend**:
+
+- **Python**: Backend logic for face detection, recognition, and attendance management. 
   
 - **Backend**: Node.js, Express
   
