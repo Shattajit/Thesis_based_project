@@ -22,31 +22,43 @@ This project implements a face recognition system that detects faces in images, 
 
 ## Technologies Used
 
-## Frontend:
+### Frontend:
 
-- **Python**: Backend logic for face detection, recognition, and attendance management. 
+- **React**: Interactive user interface for image uploading and results display.
+
+### Backend:
   
-- **Backend**: Node.js, Express
+- **Python**: Core logic for face detection, recognition, and attendance tracking.
   
-- **Database**: MongoDB
+- **OpenCV**: Image preprocessing and handling.
   
-- **Authentication**: JSON Web Tokens (JWT)
+- **Facenet-Pytorch**: Pretrained models for generating face embeddings.
   
-- **Payment Gateway**: Braintree
+- **MTCNN**: For accurate face detection.
   
-- **File Upload**: Formidable
+- **Pandas**: For data handling and generating attendance logs.
   
-- **Environment Variables**: dotenv
+- **XlsxWriter**: For exporting data into Excel files.
+
+- **Flask/Django**: For backend API services, handling image uploads, and database management.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js and npm
+To run the project locally, ensure you have the following installed:
+
+- Python 3.x and package manager **pip**
   
-- MongoDB
+- **Node.js** and **npm** (for React frontend)
   
-- Braintree account (for payment processing)
+- **OpenCV** (`pip install opencv-python`)
+
+- **Facenet-Pytorch** (`pip install facenet-pytorch`)
+
+- **MTCNN** (`pip install mtcnn`)
+
+- **Pandas**, **XlsxWriter**, and other dependencies
 
 ### Installation
 
