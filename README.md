@@ -68,102 +68,54 @@ To run the project locally, ensure you have the following installed:
    git clone <repository-url>
    cd <project-directory>
 
-2. **Install dependencies**
+2. **Install python dependencies**
+
+3. **Run the application**
+
+   The system will detect faces from the collected images, compare them with the dataset, log the attendance, and generate the report.
 
    ```bash
-   npm install
+   python app.py
    
-3. **Create a .env file**
+
+## Output
+
+1. **Detected Faces**: Faces detected from the input images are stored in the `detected_faces` folder.
    
-   Create a .env file in the root directory and add the following environment variables:
+2. **Attendance Log**: Attendance information is stored in `attendance.json` and exported to an Excel file, `attendance_log.xlsx`.
 
-   ```bash
-   PORT=<your-port>
-   MONGO_URI=<your-mongodb-uri>
-   JWT_SECRET=<your-jwt-secret>
-   BRAINTREE_MERCHANT_ID=<your-braintree-merchant-id>
-   BRAINTREE_PUBLIC_KEY=<your-braintree-public-key>
-   BRAINTREE_PRIVATE_KEY=<your-braintree-private-key>
-
-5. **Run the application**
-
-   ```bash
-   npm start
-   
-The server will be running on http://localhost:8080 (or your specified port).
-
-
-
-## API Endpoints
-
-Authentication
-
-- POST `/api/v1/auth/register`: Register a new user.
+3. **Detected Faces Log**: A list of detected face IDs is saved in `detected_faces.txt`.
   
-- POST `/api/v1/auth/login`: Log in a user.
+4. **Detected Faces**: A list of all dataset image IDs is saved in `ids.txt`.
+
+
+
+## Functionality Breakdown
+
+### Face Detection
+
+- **MTCNN** detects multiple faces in images from the `collected_faces` folder.
+
+### Face Embedding
   
-- POST `/api/v1/auth/forgot-password`: Request a password reset.
-
+- **FaceNet (InceptionResnetV1)** generates facial embeddings for detected faces.
   
-
-Categories
-
-- POST `/api/v1/category/create-category`: Create a new category.
-
-- PUT `/api/v1/category/update-category/:id`: Update an existing category.
-
-- GET `/api/v1/category/get-category`: Get all categories.
-
-- GET `/api/v1/category/single-category/:slug`: Get a single category by slug.
-
-- DELETE `/api/v1/category/delete-category/:id`: Delete a category.
+- Embeddings are compared to those of known individuals in the `dataset` folder using cosine similarity.
 
 
-
-Products
-
-- POST `/api/v1/product/create-product`: Create a new product.
-
-- PUT `/api/v1/product/update-product/:pid`: Update an existing product.
-
-- GET `/api/v1/product/get-product`: Get all products.
-
-- GET `/api/v1/product/get-product/:slug`: Get a single product by slug.
-
-- GET `/api/v1/product/product-photo/:pid`: Get a product's photo.
-
-- DELETE `/api/v1/product/delete-product/:pid`: Delete a product.
-
-- POST `/api/v1/product/product-filters`: Filter products by category and price.
-
-- GET `/api/v1/product/product-count`: Get the total count of products.
-
-- GET `/api/v1/product/product-list/:page`: Get products with pagination.
-
-- GET `/api/v1/product/search/:keyword`: Search products by keyword.
-
-- GET `/api/v1/product/related-product/:pid/:cid`: Get related products.
-
-- GET `/api/v1/product/product-category/:slug`: Get products by category.
+### Attendance Tracking
+  
+- Attendance is recorded based on face recognition results.
+  
+- The system updates attendance status as 'Present' or 'Absent' and logs this information.
 
 
+### Adaptive Thresholding
 
-Orders
+- The system uses adaptive thresholding to dynamically adjust face matching accuracy based on image quality.
 
-- GET `/api/v1/auth/orders`: Get orders for the logged-in user.
-
-- GET `/api/v1/auth/all-orders`: Get all orders (admin only).
-
-- PUT `/api/v1/auth/order-status/:orderId`: Update the status of an order.
-
-
-
-Payment
-
-- GET `/api/v1/product/braintree/token`: Get Braintree payment token.
-
-- POST `/api/v1/product/braintree/payment`: Process Braintree payment.
-
+### Report Generation
+- Attendance data is exported to `attendance_log.xlsx` with columns for ID, last seen timestamp, and attendance status.
 
 
 ## License
