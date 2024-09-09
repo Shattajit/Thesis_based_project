@@ -1,4 +1,4 @@
-# Smart Attendance System
+# Smart Attendance System Using Machine Learning And Deep Learning
 
 ## Overview
 
