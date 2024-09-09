@@ -6,13 +6,13 @@ This project implements a face recognition system using machine learning and dee
 
 ## Features
 
-- **Face Detection**: Utilizes MTCNN to detect multiple faces in images.
+- **Face Detection**: Utilized MTCNN to detect multiple faces in images.
   
-- **Face Recognition**: Uses FaceNet to extract facial embeddings and compares them using cosine similarity.
+- **Face Recognition**: Used FaceNet to extract facial embeddings and compares them using cosine similarity.
   
 - **Attendance Logging**: Tracks and records attendance information, marking individuals as 'Present' or 'Absent'.
   
-- **Dynamic Thresholding**: Employs adaptive thresholding to improve face matching accuracy based on image quality.
+- **Dynamic Thresholding**: Employed adaptive thresholding to improve face matching accuracy based on image quality.
   
 - **Report Generation**: Exports attendance data to an Excel file (`attendance_log.xlsx`).
   
