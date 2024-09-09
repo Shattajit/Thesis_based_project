@@ -22,7 +22,7 @@ This project implements a face recognition system that detects faces in images, 
 
 ## Technologies Used
 
-**Frontend**:
+## Frontend:
 
 - **Python**: Backend logic for face detection, recognition, and attendance management. 
   
