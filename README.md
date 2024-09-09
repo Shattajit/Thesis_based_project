@@ -40,7 +40,7 @@ This project implements a face recognition system that detects faces in images, 
   
 - **XlsxWriter**: For exporting data into Excel files.
 
-- **Flask/Django**: For backend API services, handling image uploads, and database management.
+- **Flask**: For backend API services, handling image uploads, and database management.
 
 ## Getting Started
 
