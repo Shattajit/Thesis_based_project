@@ -1,8 +1,8 @@
-# Smart Attendance System Using Machine Learning And Deep Learning
+# Smart Attendance System 
 
 ## Overview
 
-This project implements a face recognition system that detects faces in images, compares them with a predefined dataset, and logs attendance. It uses MTCNN for face detection, FaceNet (InceptionResnetV1) for facial feature extraction, and cosine similarity for comparing embeddings. The system logs the attendance in an `attendance.json` file and generates a report in `attendance_log.xlsx`. The detected faces are also saved, and their details are logged in `detected_faces.txt`.
+This project implements a face recognition system using machine learning and deep learning that detects faces in images, compares them with a predefined dataset, and logs attendance. It uses MTCNN for face detection, FaceNet (InceptionResnetV1) for facial feature extraction, and cosine similarity for comparing embeddings. The system logs the attendance in an `attendance.json` file and generates a report in `attendance_log.xlsx`. The detected faces are also saved, and their details are logged in `detected_faces.txt`.
 
 ## Features
 
