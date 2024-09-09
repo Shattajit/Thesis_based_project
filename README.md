@@ -1,4 +1,4 @@
-# Omnitrix
+# Smart Attendance System
 
 ## Overview
 
